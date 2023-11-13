@@ -11,11 +11,7 @@
       "noEmit": true,
       "incremental": true,
       "esModuleInterop": true,
-      "module": "esnext",
-      "moduleResolution": "node",
-      "resolveJsonModule": true,
       "isolatedModules": true,
-      "jsx": "preserve",
       "target": "ES5"
     },
     "include": [
@@ -23,8 +19,5 @@
       "**/*.ts",
       "**/*.tsx"
     ],
-    "exclude": [
-      "node_modules"
-    ]
   }
   
