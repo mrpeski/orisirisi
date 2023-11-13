@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Dropdown.module.css'
+import * as styles from '../styles/Dropdown.module.css'
 
 export const Dropdown = (props) => {
     const [active, setActive] = React.useState(props.defaultSelected)
