@@ -1,0 +1,27 @@
+{
+  "name": "orisirisi",
+  "version": "1.0.0",
+  "description": "A variety of react components.",
+  "source": "src/index.ts",
+  "main": "dist/main.js",
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrpeski/orisirisi.git"
+  },
+  "keywords": [
+    "React",
+    "Components"
+  ],
+  "author": "Olayinka Ogunwemimo",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.10.2"
+  }
+}

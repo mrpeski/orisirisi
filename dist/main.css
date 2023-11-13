@@ -1,0 +1,43 @@
+.AR_Ijq_wrapper {
+  position: relative;
+}
+
+.AR_Ijq_ul {
+  border: 1px solid #fff;
+  min-width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 12px #00000008;
+}
+
+.AR_Ijq_show {
+  display: block;
+}
+
+.AR_Ijq_hide {
+  display: none;
+}
+
+.AR_Ijq_button {
+  text-align: left;
+  background: #fff;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: calc(.55rem + 1px) calc(1.25rem + 1px);
+}
+
+.AR_Ijq_button:hover {
+  background: #f5f5f5;
+}
+
+.AR_Ijq_active {
+  background: #f5f5f5;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=main.css.map */
