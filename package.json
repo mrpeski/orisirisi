@@ -23,5 +23,8 @@
   },
   "devDependencies": {
     "parcel": "^2.10.2"
+  },
+  "@parcel/transformer-css": {
+    "global": true
   }
 }

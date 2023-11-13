@@ -1,5 +1,4 @@
 import React from 'react'
-import * as styles from '../styles/Dropdown.module.css'
 
 export const Dropdown = (props) => {
     const [active, setActive] = React.useState(props.defaultSelected)
@@ -9,7 +8,7 @@ export const Dropdown = (props) => {
         (e: MouseEvent) => {
             e.preventDefault()
             const target: any = e.target
-            if (show && !target.classList.contains(styles.button)) {
+            if (show && !target.classList.contains("button")) {
                 setShow(false)
             }
         },
@@ -36,21 +35,21 @@ export const Dropdown = (props) => {
         setShow(!show)
     }
     return (
-        <article className={styles.wrapper}>
+        <article className={"wrapper"}>
             <button
                 onClick={toggleShow}
-                className={[styles.button, styles.active].join(' ')}
+                className={["button", "active"].join(' ')}
             >
                 {props.list.find((item) => item.id === active)?.label}
             </button>
-            <ul className={[styles.ul, show ? styles.show : styles.hide].join(' ')}>
+            <ul className={["ul", show ? "show" : "hide"].join(' ')}>
                 {props.list.map((item) => (
                     <li key={item.id}>
                         <button
                             onClick={handleSelect}
                             className={[
-                                styles.button,
-                                item.id === active ? styles.active : '',
+                                "button",
+                                item.id === active ? "active" : '',
                             ].join(' ')}
                             data-id={item.id}
                         >
