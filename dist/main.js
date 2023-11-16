@@ -1,5 +1,7 @@
 var $8zHUo$reactjsxruntime = require("react/jsx-runtime");
 var $8zHUo$react = require("react");
+var $8zHUo$reactdomclient = require("react-dom/client");
+var $8zHUo$reactdom = require("react-dom");
 
 
 function $parcel$export(e, n, v, s) {
@@ -11,6 +13,8 @@ function $parcel$interopDefault(a) {
 }
 
 $parcel$export(module.exports, "Dropdown", () => $7d60e25e1894b401$export$931cbfb6bfb85fc);
+$parcel$export(module.exports, "usePrinter", () => $4f3642e75b001b63$export$dfbb4c7cd62d88d3);
+$parcel$export(module.exports, "useNodeToString", () => $7ca7aee21a999e2e$export$b817cffffbc22d24);
 
 
 const $7d60e25e1894b401$export$931cbfb6bfb85fc = (props)=>{
@@ -74,6 +78,40 @@ const $7d60e25e1894b401$export$931cbfb6bfb85fc = (props)=>{
     });
 };
 var $7d60e25e1894b401$export$2e2bcd8739ae039 = $7d60e25e1894b401$export$931cbfb6bfb85fc;
+
+
+function $4f3642e75b001b63$export$dfbb4c7cd62d88d3(content) {
+    function setPrint() {
+        const closePrint = ()=>{
+            document.body.removeChild(this);
+        };
+        this.contentWindow.onbeforeunload = closePrint;
+        this.contentWindow.onafterprint = closePrint;
+        this.contentWindow.print();
+    }
+    const send = ()=>{
+        const hideFrame = document.createElement("iframe");
+        hideFrame.onload = setPrint;
+        hideFrame.style.display = "none"; // hide iframe
+        hideFrame.innerHTML = content;
+        document.body.appendChild(hideFrame);
+    };
+    return {
+        send: send
+    };
+}
+
+
+
+
+const $7ca7aee21a999e2e$export$b817cffffbc22d24 = (reactNode)=>{
+    const div = document.createElement("div");
+    const root = (0, $8zHUo$reactdomclient.createRoot)(div);
+    (0, $8zHUo$reactdom.flushSync)(()=>{
+        root.render(reactNode);
+    });
+    return div.innerHTML;
+};
 
 
 
